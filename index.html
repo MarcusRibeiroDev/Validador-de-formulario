@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Formulário</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body>
+
+    <div id="container--grid">
+
+        <div class="image--aside">
+
+            <div class="feedbackMessage">
+                <span class="span--1">
+                    <p></p>
+                </span>
+                <button class="btn--close"></button> 
+            </div>
+
+            <img src="images/imagem-1-removebg-preview.png" alt="Ilustração">
+
+        </div>
+
+        <main class="container--parent">
+
+            <div class="container">
+
+                <h1>Faça sua solicitação</h1>
+
+                <form action="#" class="validator--form">
+
+                    <label for="user-name">Nome</label>
+                    <input type="text" id="user-name" name="nome" placeholder="Digite seu nome..."><br>
+
+                    <label for="email">Endereço de email</label>
+                    <input type="text" id="email" name="email" placeholder="Digite seu email..."><br>
+
+                    <label for="subject">Assunto</label>
+                    <input type="text" class="list" list="subject">
+                    <datalist id="subject" name="assunto">
+                        <option>Suporte</option>
+                        <option>Orçamento</option>
+                        <option>Entrega</option>
+                        <option>Financeiro</option>
+                        <option>Reclamação</option>
+                        <option>Sugestão</option>
+                        <option>Outros</option>
+                    </datalist><br>
+
+                    <textarea id="complaint" rows="5" maxlength="500" placeholder="Digite aqui..."></textarea>
+                    <div id="contador" style="display: none;"><span></span> caracteres</div><br>
+
+                    <input type="checkbox" id="responsability" name="responsabilidade">
+                    <label for="responsability">Eu estou de acordo com os termos do site</label><br>
+
+                    <input class="btn fifth" type="submit" value="Enviar" name="enviar">
+
+                </form>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
