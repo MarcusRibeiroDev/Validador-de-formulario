@@ -18,7 +18,7 @@
 
         <div class="image--aside">
 
-            <div class="feedbackMessage">
+            <div class="feedbackMessageError">
                 <span class="span--1"></span>
                 <button class="btn--close"></button> 
             </div>
@@ -36,10 +36,10 @@
                 <form action="#" class="validator--form">
 
                     <label for="user-name">Nome</label>
-                    <input type="text" id="user-name" name="nome" placeholder="Digite seu nome..."><br>
+                    <input type="text" id="user-name" name="nome" placeholder="Deve conter 3 caracteres ou mais..."><br>
 
                     <label for="email">Endereço de email</label>
-                    <input type="text" id="email" name="email" placeholder="Digite seu email..."><br>
+                    <input type="text" id="email" name="email" placeholder="Exemplo: marcus10dev@gmail.com"><br>
 
                     <label for="subject">Assunto</label>
                     <input type="text" class="list" list="subject">
@@ -53,13 +53,15 @@
                         <option value="Outros">Outros</option>
                     </datalist><br>
 
-                    <textarea id="complaint" rows="5" maxlength="500" placeholder="Digite aqui..."></textarea>
+                    <textarea id="complaint" rows="5" maxlength="500" placeholder="Descreva o motivo da solicitação..."></textarea>
                     <div id="contador" style="display: none;"><span></span> caracteres</div><br>
 
-                    <input type="checkbox" id="responsability" name="responsabilidade">
-                    <label for="responsability">Eu estou de acordo com os termos do site</label><br>
+                    <div class="checkbox--camp">
+                        <input type="checkbox" id="responsability" name="responsabilidade">
+                        <label for="responsability">Eu estou de acordo com os termos do site</label><br>
+                    </div>
 
-                    <input class="btn fifth" type="submit" value="Enviar" name="enviar">
+                    <button class="btn fifth" type="submit">Enviar</button>
 
                 </form>
 
