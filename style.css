@@ -8,9 +8,10 @@ html{
   position: fixed;
   font-size: 62.5%;
   overflow: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
-#container--grid{
+#container--main{
     display: flex;
     width: 100vw;
     height: 100vh;
@@ -26,7 +27,7 @@ html{
 }
 
 .image--aside{
-    width: 50%
+    width: 50%;
 }
 
 .container{
@@ -37,7 +38,6 @@ html{
 label{
     font-size: 1.6rem;
     font-weight: 400;
-    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     color: rgb(0, 0, 77);
 }
@@ -46,7 +46,6 @@ h1{
     font-weight: 600;
     font-size: 4rem;
     margin-bottom: 3rem;
-    font-family: 'Roboto', sans-serif;
     color: aliceblue;
 }
 
@@ -79,9 +78,10 @@ h1{
 }
 
 .list{
-    margin-bottom: 1.4rem;
+    width: 24.8rem;
+    margin-bottom: 2.4rem;
     margin-left: 1rem;
-    padding: 0.5rem;
+    padding: 0.6rem;
     border-radius: 1.1rem;
     border: 2px solid #00000095;
     background-color:ghostwhite;
@@ -91,7 +91,7 @@ h1{
     width: 32rem;
     height: 22rem;
     padding: 10px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border: 2px solid #00000095;
     resize: none;
     background-color:ghostwhite;
@@ -119,7 +119,6 @@ h1{
     border: 2px solid #00000095;
     background-color: yellow;
     color: rgba(0, 0, 77, 0.746);
-    font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
     font-weight: 700;
 }
@@ -157,7 +156,8 @@ h1{
 
 .feedbackMessageError{
     margin-top: 4.2rem;
-    width: 60%;
+    width: 75%;
+    max-width: 540px;
     height:10rem;
     background-color: grey;
     padding: 1.5rem;
@@ -174,7 +174,6 @@ h1{
     color: white;
     font-size: 1.8rem;
     padding: 0.5rem;
-    font-family: 'Roboto', sans-serif;
 }
 
 .show{
@@ -184,13 +183,104 @@ h1{
 }
 
 .btn--close{
-    margin-right: 0.5rem;
     background-image: url('images/close_button.png');
     background-size: contain;
     background-position: center;
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     border: none;
     background-color: rgba(255, 0, 0, 0);
 }
+
+@media screen and (max-width: 1024px){
+
+    .image--aside img {
+        height: 440px;
+    }
+
+    .feedbackMessageError{
+        width: 70%;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+
+    .image--aside img {
+        height: 380px;
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+    }
+
+    .feedbackMessageError{
+        width: 85%;
+    }
+
+    #user-name{
+        width: 28rem
+    }
+
+    #email{
+        width: 28rem
+    }
+
+    #complaint{
+        width: 28rem;
+    }
+
+    .checkbox--camp label{
+        font-size: 1.3rem;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    .feedbackMessageError{
+        margin-top: 0rem;
+    }
+
+    .list{
+        width: 20.8rem;
+    }
+    
+}
+
+@media screen and (max-width: 660px){
+
+    #container--main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image--aside img{
+        display: none;
+    }
+
+    .feedbackMessageError{
+        margin-top: 2rem;
+        height: 8rem;
+        width: 290px;
+    }
+
+    .feedbackMessageError span p{
+        font-size: 1.6rem;
+    }
+
+    .container--parent, .image--aside{
+        width: 90%;
+    }
+
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
 

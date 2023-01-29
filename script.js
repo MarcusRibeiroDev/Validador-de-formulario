@@ -1,3 +1,4 @@
+(function(){
 
     'use-strict'
 
@@ -7,13 +8,13 @@
     let inputSubject = document.querySelector('.list')
     let textArea = document.querySelector('#complaint')
     const feedbackMessageError = document.querySelector('.feedbackMessageError')
-    const feedbackMessageSuccess = document.querySelector('.feedbackMessageSuccess')
     const btnClose = document.querySelector('.btn--close')
     const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 
-    // CRIANDO BLOQUEIO DE ENVIO DE FORMULÁRIO CASO OS CAMPOS NÃO SEJAM PRENCHIDOS CORRETAMENTE
+    // Criando bloqueio no envio de formulário para campos invalidos
 
     form.addEventListener('submit',function(e){
+
         if(!inputUser.value || !inputEmail.value || !inputSubject.value){
             showError('Existem campos vazios', function(){
                 inputUser.focus()
@@ -42,9 +43,11 @@
             })
             e.preventDefault()
         }
+
     })
 
     function showError(msg,cb){
+
         const spanElement = document.querySelector('.span--1')
         const createdElement = document.createElement('p')
 
@@ -77,7 +80,7 @@
 
     }
 
-    // CRIAR BLOQUEIO DO BOTÃO
+    // Criando bloqueio no botão "enviar"
 
     let btnSubmit = document.querySelector('.btn')
 
@@ -86,9 +89,12 @@
     let checkBox1 = document.querySelector('#responsability')
 
     checkBox1.addEventListener('change',function(){
+
         btnSubmit.disabled = !this.checked
+
     })
 
+})()
 
 
 
